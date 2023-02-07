@@ -1,5 +1,3 @@
-import javax.print.event.PrintJobListener;
-
 class Mobil {
     // property
     String merk;
