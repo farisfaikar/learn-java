@@ -21,6 +21,12 @@ public class TV {
         on = false;
     }
 
+    public TV(int channel, int volumeLevel, boolean on) {
+        setChannel(channel);
+        setVolume(volumeLevel);
+        this.on = on;
+    }
+
     // methods
     public void turnOn() {
         on = true;
@@ -34,26 +40,32 @@ public class TV {
         if (newChannel > maxChannel) {
             channel = maxChannel;
             System.out.println(
-                    "Input channel is too large (" + newChannel + "), channel defaults to: " + maxChannel);
+                    "\033[31m!!!!! Input channel value is too large (" + newChannel + "), channel defaults to: "
+                            + maxChannel + " !!!!!\033[0m");
         } else if (newChannel < minChannel) {
             channel = minChannel;
             System.out.println(
-                    "Input channel is too small (" + newChannel + "), channel defaults to: " + minChannel);
-        } else
+                    "\033[31m!!!!! Input channel value is too small (" + newChannel + "), channel defaults to: "
+                            + minChannel + " !!!!!\033[0m");
+        } else {
             channel = newChannel;
+        }
     }
 
     public void setVolume(int newVolumeLevel) {
         if (newVolumeLevel > maxVolume) {
             volumeLevel = maxVolume;
             System.out.println(
-                    "Input volume is too large (" + newVolumeLevel + "), volume defaults to: " + maxVolume);
+                    "\033[31m!!!!! Input volume value is too large (" + newVolumeLevel + "), volume defaults to: "
+                            + maxVolume + " !!!!!\033[0m");
         } else if (newVolumeLevel < minVolume) {
             volumeLevel = minVolume;
             System.out.println(
-                    "Input volume is too small (" + newVolumeLevel + "), volume defaults to: " + minVolume);
-        } else
+                    "\033[31m!!!!! Input volume value is too small (" + newVolumeLevel + "), volume defaults to: "
+                            + minVolume + " !!!!!\033[0m");
+        } else {
             volumeLevel = newVolumeLevel;
+        }
     }
 
     public void channelUp() {
@@ -71,16 +83,16 @@ public class TV {
     }
 
     public void volumeUp() {
-        if (volumeLevel < maxVolume)
-            volumeLevel++;
+        if (volumeLevel >= maxVolume)
+            volumeLevel = maxVolume;
         else
-            volumeLevel = minVolume;
+            volumeLevel++;
     }
 
     public void volumeDown() {
-        if (volumeLevel > minVolume)
-            volumeLevel--;
+        if (volumeLevel <= minVolume)
+            volumeLevel = minVolume;
         else
-            volumeLevel = maxVolume;
+            volumeLevel--;
     }
 }
