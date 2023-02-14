@@ -1,14 +1,20 @@
 class Mobil {
     // property
     String merk;
-    String _pemilik;
-    String _warna;
+    String pemilik;
+    String warna;
 
     // method konstruktor
+    Mobil() {
+        merk = "Unknown";
+        pemilik = "John Doe";
+        warna = "Black";
+    }
+
     Mobil(String pemilik, String warna) {
-        merk = "Daihatsu";
-        _pemilik = pemilik;
-        _warna = warna;
+        this.merk = "Daihatsu";
+        this.pemilik = pemilik;
+        this.warna = warna;
     }
 
     // method biasa
@@ -21,15 +27,14 @@ class Mobil {
     }
 
     void lihatWarna() {
-        System.out.println("Warna mobil " + merk + ": " + _warna);
+        System.out.println("Warna mobil " + merk + ": " + warna);
     }
 
     void lihatNamaPemilik() {
-        System.out.println("Nama pemilik: " + _pemilik);
+        System.out.println("Nama pemilik: " + pemilik);
     }
 
     public static void main(String[] aa) {
-        // System.out.println("Hello World");
         Mobil mobilFaris = new Mobil("Faris Faikar Razannafi", "Navy");
         mobilFaris.lihatMerk(); // Daihatsu
         mobilFaris.setMerk("Pagani");
@@ -41,6 +46,10 @@ class Mobil {
         mobilSyadu.setMerk("Maserati");
         mobilSyadu.lihatMerk(); // Maserati
 
-        mobilSyadu.lihatWarna();
+        Mobil mobilDefault = new Mobil();
+        mobilDefault.lihatMerk(); // Daihatsu
+        mobilDefault.setMerk("Mclaren");
+        mobilDefault.lihatMerk(); // Maserati
+        mobilDefault.lihatWarna();
     }
 }
