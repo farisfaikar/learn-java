@@ -1,3 +1,7 @@
+// Nama: Faris Faikar Razannafi
+// NIM: 4611421092
+// PBO: Kelompok 1
+
 public class TestTV {
     public static void main(String[] args) {
         TV tv1 = new TV();
@@ -10,27 +14,7 @@ public class TestTV {
         tv2.channelUp();
         tv2.channelUp();
         tv2.volumeUp();
-
         System.out.println("tv1's channel is " + tv1.channel + " and volume level is " + tv1.volumeLevel);
         System.out.println("tv2's channel is " + tv2.channel + " and volume level is " + tv2.volumeLevel);
-
-        myTest();
-    }
-
-    static void myTest() {
-        TV tv3 = new TV();
-        tv3.setChannel(120);
-        tv3.channelUp();
-        tv3.setVolume(7);
-        tv3.volumeUp();
-
-        TV tv4 = new TV();
-        tv4.setChannel(1);
-        tv4.channelDown();
-        tv4.setVolume(1);
-        tv4.volumeDown();
-
-        System.out.println("tv3's channel is " + tv3.channel + " and volume level is " + tv3.volumeLevel);
-        System.out.println("tv4's channel is " + tv4.channel + " and volume level is " + tv4.volumeLevel);
     }
 }

@@ -1,5 +1,6 @@
 // Nama: Faris Faikar Razannafi
 // NIM: 4611421092
+// PBO: Kelompok 1
 
 public class TV {
     // property
@@ -13,58 +14,72 @@ public class TV {
     private int minVolume = 1;
     private int maxVolume = 7;
 
+    // constructor
     public TV() {
-        this.channel = 1;
-        this.volumeLevel = 1;
-        this.on = false;
-    }
-
-    public TV(int channel, int volumeLevel, boolean on) {
-        this.channel = channel;
-        this.volumeLevel = volumeLevel;
-        this.on = on;
-    }
-
-    void turnOn() {
-        on = true;
-    }
-
-    void turnOff() {
+        channel = 1;
+        volumeLevel = 1;
         on = false;
     }
 
-    void setChannel(int newChannel) {
-        channel = newChannel;
+    // methods
+    public void turnOn() {
+        on = true;
     }
 
-    void setVolume(int newVolumeLevel) {
-        volumeLevel = newVolumeLevel;
+    public void turnOff() {
+        on = false;
     }
 
-    void channelUp() {
+    public void setChannel(int newChannel) {
+        if (newChannel > maxChannel) {
+            channel = maxChannel;
+            System.out.println(
+                    "Input channel is too large (" + newChannel + "), channel defaults to: " + maxChannel);
+        } else if (newChannel < minChannel) {
+            channel = minChannel;
+            System.out.println(
+                    "Input channel is too small (" + newChannel + "), channel defaults to: " + minChannel);
+        } else
+            channel = newChannel;
+    }
+
+    public void setVolume(int newVolumeLevel) {
+        if (newVolumeLevel > maxVolume) {
+            volumeLevel = maxVolume;
+            System.out.println(
+                    "Input volume is too large (" + newVolumeLevel + "), volume defaults to: " + maxVolume);
+        } else if (newVolumeLevel < minVolume) {
+            volumeLevel = minVolume;
+            System.out.println(
+                    "Input volume is too small (" + newVolumeLevel + "), volume defaults to: " + minVolume);
+        } else
+            volumeLevel = newVolumeLevel;
+    }
+
+    public void channelUp() {
         if (channel < maxChannel)
-            channel += 1;
+            channel++;
         else
             channel = minChannel;
     }
 
-    void channelDown() {
+    public void channelDown() {
         if (channel > minChannel)
-            channel -= 1;
+            channel--;
         else
             channel = maxChannel;
     }
 
-    void volumeUp() {
+    public void volumeUp() {
         if (volumeLevel < maxVolume)
-            volumeLevel += 1;
+            volumeLevel++;
         else
             volumeLevel = minVolume;
     }
 
-    void volumeDown() {
+    public void volumeDown() {
         if (volumeLevel > minVolume)
-            volumeLevel -= 1;
+            volumeLevel--;
         else
             volumeLevel = maxVolume;
     }
