@@ -1,4 +1,4 @@
-public class GamePlayer {
+public class GameEnemy {
     // property
     private double width;
     private double height;
@@ -6,14 +6,14 @@ public class GamePlayer {
     private int positionY;
 
     // constructor
-    public GamePlayer() {
+    public GameEnemy() {
         width = 0;
         height = 0;
         positionX = 0;
         positionY = 0;
     }
 
-    public GamePlayer(double width, double height) {
+    public GameEnemy(double width, double height) {
         this.width = width;
         this.height = height;
     }
@@ -46,11 +46,6 @@ public class GamePlayer {
     }
 
     public void Run() {
-        System.out.println("Player is running");
-    }
-
-    public void Run(int incrementX) {
-        positionX += incrementX;
-        System.out.println("Player is running...current X position = " + positionX);
+        System.out.println("Enemy is running");
     }
 }
