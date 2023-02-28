@@ -7,19 +7,25 @@ public class TestGame {
     public static void main(String[] args) {
         GamePlayer p1 = new GamePlayer();
         GamePlayer p2 = new GamePlayer(10, 20);
+        GamePlayer p3 = new GamePlayer(30, 40, 50, 60);
 
         System.out.println("=== Player 1 ===");
         testGamePlayer(p1, 1, 2, 3, 4, 5);
         System.out.println("=== Player 2 ===");
         testGamePlayer(p2, 6, 7, 8, 9, 10);
-
+        System.out.println("=== Player 3 ===");
+        testGamePlayer(p3, 11, 12, 13, 14, 15);
+        
         GameEnemy e1 = new GameEnemy();
         GameEnemy e2 = new GameEnemy(30, 40);
+        GameEnemy e3 = new GameEnemy(30, 40, 50, 60);
 
         System.out.println("=== Enemy 1 ===");
         testGameEnemy(e1, 11, 22, 33, 44);
         System.out.println("=== Enemy 2 ===");
         testGameEnemy(e2, 55, 66, 77, 88);
+        System.out.println("=== Enemy 3 ===");
+        testGameEnemy(e3, 99, 11, 22, 33);
 
     }
 

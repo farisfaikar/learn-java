@@ -18,6 +18,13 @@ public class GamePlayer {
         this.height = height;
     }
 
+    public GamePlayer(double width, double height, int positionX, int positionY) {
+        this.width = width;
+        this.height = height;
+        this.positionX = positionX;
+        this.positionY = positionY;
+    }
+
     // methods
     public void setDimension(double width, double height) {
         this.width = width;

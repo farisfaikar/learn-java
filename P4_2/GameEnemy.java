@@ -1,11 +1,14 @@
+// Nama: Faris Faikar Razannafi
+// NIM: 4611421092
+
 public class GameEnemy {
-    // property
+    // properties
     private double width;
     private double height;
     private int positionX;
     private int positionY;
 
-    // constructor
+    // constructors
     public GameEnemy() {
         width = 0;
         height = 0;
@@ -16,6 +19,13 @@ public class GameEnemy {
     public GameEnemy(double width, double height) {
         this.width = width;
         this.height = height;
+    }
+
+    public GameEnemy(double width, double height, int positionX, int positionY) {
+        this.width = width;
+        this.height = height;
+        this.positionX = positionX;
+        this.positionY = positionY;
     }
 
     // methods
