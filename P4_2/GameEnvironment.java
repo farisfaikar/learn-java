@@ -79,10 +79,9 @@ public class GameEnvironment {
         }
     }
 
-    public int EuclideanDistance(int x1, int y1, int x2, int y2) {
+    public static int EuclideanDistance(int x1, int y1, int x2, int y2) {
         int dx = x2 - x1;
         int dy = y2 - y1;
-        double distance = Math.sqrt(dx * dx + dy * dy);
-        return Math.round((float) distance);
+        return (int) Math.sqrt(dx * dx + dy * dy);
     }
 }
