@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Tes
 {
 	public static void main(String[] as)

@@ -84,4 +84,12 @@ public class GameEnvironment {
         int dy = y2 - y1;
         return (int) Math.sqrt(dx * dx + dy * dy);
     }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public double getHeight() {
+        return height;
+    }
 }

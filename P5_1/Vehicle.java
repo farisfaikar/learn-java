@@ -7,6 +7,7 @@ public class Vehicle {
         color = "orange";
     }
 
+    // Tidak ada di modul
     public Vehicle(double speed, String color) {
         this.speed = speed;
         this.color = color;

@@ -3,6 +3,8 @@ public class MotorVehicle extends Vehicle {
     public String licencePlate;
 
     public MotorVehicle() {
+        super.speed = 42.0; // Tidak ada di modul
+        super.color = "cyan"; // Tidak ada di modul
         sizeofEngine = 1;
         licencePlate = "H 1 IDN";
     }
