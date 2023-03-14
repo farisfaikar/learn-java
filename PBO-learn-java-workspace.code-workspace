@@ -34,7 +34,34 @@
 			"path": "P5_1"
 		},
 		{
-			"path": "."
+			"path": "P6_0"
+		},
+		{
+			"path": "P6_control"
+		},
+		{
+			"path": "P6_1"
 		}
-	]
+	],
+	"settings": {
+		"hide-files.files": [
+			"/d:/Faris-Projects/Programming/Java/learn-java/P6_1/Vehicle.class",
+			"/d:/Faris-Projects/Programming/Java/learn-java/P6_1/Bicycle.class"
+		],
+		"files.exclude": {
+			"P6_1/**/*.class": true,
+			"P6_1/**/*.log": true,
+			"P6_1/**/*.ctxt": true,
+			"P6_1/**/.mtj.tmp/": true,
+			"P6_1/**/*.jar": true,
+			"P6_1/**/*.war": true,
+			"P6_1/**/*.nar": true,
+			"P6_1/**/*.ear": true,
+			"P6_1/**/*.zip": true,
+			"P6_1/**/*.tar.gz": true,
+			"P6_1/**/*.rar": true,
+			"P6_1/**/hs_err_pid*": true,
+			"P6_1/**/replay_pid*": true
+		}
+	}
 }
